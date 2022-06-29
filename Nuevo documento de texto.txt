@@ -7,9 +7,10 @@
 <div class="container py-2">
 <p class="lead">ingresa datos</p>
 <form>
-      <input id="software" type="text" placeholder="ingresa nombre" class="form-control my-2">
-      <input id="empresa" type="text" placeholder="ingresa director" class="form-control my-2">
-      <input id="usuario" type="date" placeholder="ingresa año" class="form-control my-2">
+      <input id="software" type="text" placeholder="ingresa software" class="form-control my-2">
+      <input id="empresa" type="text" placeholder="ingresa empresa" class="form-control my-2">
+      <input id="usuario" type="date" placeholder="ingresa usuario" class="form-control my-2">
+      <button id="boton" type="reset" onclick="capturar();"  class="btn bnt-success">agregar</button>
       /form>
     </div>
     <div class="container">
