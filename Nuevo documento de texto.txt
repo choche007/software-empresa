@@ -9,7 +9,7 @@
 <form>
       <input id="software" type="text" placeholder="ingresa software" class="form-control my-2">
       <input id="empresa" type="text" placeholder="ingresa empresa" class="form-control my-2">
-      <input id="usuario" type="date" placeholder="ingresa usuario" class="form-control my-2">
+      <input id="usuario" type="text" placeholder="ingresa usuario" class="form-control my-2">
       <button id="boton" type="reset" onclick="capturar();"  class="btn bnt-success">agregar</button>
       /form>
     </div>
