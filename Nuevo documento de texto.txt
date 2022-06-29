@@ -1,1 +1,55 @@
 <!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+<title>Ejercicio de Arreglos JavaScript </title>
+</head>
+<body>
+<div class="container py-2">
+<p class="lead">ingresa datos</p>
+<form>
+      <input id="software" type="text" placeholder="ingresa nombre" class="form-control my-2">
+      <input id="empresa" type="text" placeholder="ingresa director" class="form-control my-2">
+      <input id="usuario" type="date" placeholder="ingresa año" class="form-control my-2">
+      /form>
+    </div>
+    <div class="container">
+      <table class="table" id="tabla">
+        <thead class="thead-inverse">
+          <tr>
+            <th>software</th>
+            <th>empresa</th>
+            <th>usuario</th>
+          </tr>
+        </thead>
+      </table>
+      </div>
+      <script>
+      function capturar(){
+        //console.log("capturado");
+        function Persona(software, empresa, usuario){
+          this.software=software;
+          this.empresa=empresa;
+          this.usuario=usuario;
+
+        }
+        var capturarsoftware=document.getElementById("software").value;
+        console.log(capturarsoftware);
+        var capturarempresa=document.getElementById("empresa").value;
+        console.log(capturarempresa);
+        var capturarusuario=document.getElementById("usuario").value;
+        console.log(capturarusuario);
+        sujeto= new Persona(capturarsoftware, capturarempresa, capturarusuario);
+        //variable global
+        //console.log(sujeto);
+        agregar();
+      }
+      var basedatos=[];
+      function agregar(){
+        basedatos.push(sujeto)
+        console.log(basedatos);
+        document.getElementById("tabla").innerHTML += '<tbody><td>'+sujeto.software+'</td><td>'+sujeto.empresa+'<td>'+sujeto.usuario+'</td></tbody>';
+      };
+    </script>
+
+  </body>
+</html>
