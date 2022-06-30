@@ -2,28 +2,35 @@
 <html lang="es" dir="ltr">
 <head>
 <title>Ejercicio de Arreglos JavaScript </title>
+<link rel="stylesheet" href="fondo.css"/>  
 </head>
 <body>
+<style>
+table, th, td { border: 5px solid; color: Red;}
+</style>
 <div class="container py-2">
-<p class="lead">ingresa datos</p>
-<form>
-      <input id="software" type="text" placeholder="ingresa software" class="form-control my-2">
-      <input id="empresa" type="text" placeholder="ingresa empresa" class="form-control my-2">
-      <input id="usuario" type="text" placeholder="ingresa usuario" class="form-control my-2">
-      <button id="boton" type="reset" onclick="capturar();"  class="btn bnt-success">agregar</button>
-      /form>
+<div class="container">
+<p class="lead">LISTADO</p>
+<table class="table" id="tabla">
+    <thead class="thead-inverse">
+       <tr>
+         <th>software</th>
+         <th>empresa</th>
+         <th>usuario</th>
+       </tr>
+    <form>
+    <tr>
+      <td><input id="software" type="text" placeholder="software" class="form-control my-2"></td>
+      <td><input id="empresa" type="text" placeholder="empresa" class="form-control my-2"></td>
+      <td><input id="usuario" type="text" placeholder="usuario" class="form-control my-2"></td>
+      <td><button id="boton" type="reset" onclick="capturar();"  class="btn bnt-success">agregar</button></td>
+      <td><button id="boton2" type="submit" onclick="color();" class="btn bnt-sucess">Color</button></td>
+    </tr>
+    </form>
+    </thead>
+    </table>
     </div>
-    <div class="container">
-      <table class="table" id="tabla">
-        <thead class="thead-inverse">
-          <tr>
-            <th>software</th>
-            <th>empresa</th>
-            <th>usuario</th>
-          </tr>
-        </thead>
-      </table>
-      </div>
+    </div>
       <script>
       function capturar(){
         //console.log("capturado");
@@ -49,7 +56,12 @@
         basedatos.push(sujeto)
         console.log(basedatos);
         document.getElementById("tabla").innerHTML += '<tbody><td>'+sujeto.software+'</td><td>'+sujeto.empresa+'<td>'+sujeto.usuario+'</td></tbody>';
-      };
+      }
+      function color(){
+        boton2.onclick=
+        tabla.style.background="blue";
+
+    }
     </script>
 
   </body>
