@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="django.css">
+        <style>
+            body {
+    background-color: rgb(137, 61, 236);
+  }
+  
+  h1 {
+    color: white;
+    text-align: center;
+  }
+  
+  p {
+    font-family: verdana;
+    font-size: 20px;
+  }
+        </style>
+    </head>
+    <header>
+        <h1>Novedades</h1>
+    </header>
+    <body>
+     
+        <h2> Últimas novedades en libros de este 2022
+        </h2>
+        <p>Las mejores novedades {{nombre_persona}} {{apellido_persona}} {{fecha_act}} </p>
+        <p>En esta página podrás consultar todos los libros publicados que ya puedes comprar en las librerías. No dejes escapar todas las novedades de libros para estar al día del mundo literario sea cual sean tus gustos. ¡Te encantarán!</p>
+        <p><h3>Lista de nuestas mejores novedades</h3></p>
+        <p>
+          <ul>
+            {%if temas %}
+              {% for temas_c in temas %}
+
+                  <li> {{temas_c}} </li>
+
+              {% endfor %}
+            {% else %}  
+              <p>No se encontro contenido</p>
+            {%endif%}
+          </ul>
+        </p>
+      </body>
+    </html>
