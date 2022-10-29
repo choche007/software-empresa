@@ -18,27 +18,30 @@
         </style>
     </head>
     <header>
-        <h1>Esto es el la 2da Plantilla de ejemplo</h1>
+        <h1>Libros en Promoción </h1>
     </header>
     <body>
-        {% include "menu.html"%}
-        <h2> Esto es una plantilla
+<div id="caja1">
+     <nav>
+    <ul class="menu">
+    <li><a href="plantilla1.html">novedades</a></li>
+    <li><a href="plantilla2.html">titulos</a></li>
+    <li><a href="plantilla3.html">promociones</a></li>
+    </ul>
+    </nav>
+</div>
+        <h2> Nuevos packs con regalo para todos los públicos :-)
         </h2>
-        <p>Mi nombre es {{nombre_persona}} {{apellido_persona}} {{fecha_act}} </p>
-        <p>Esto es un parrafo de ejemplo que podria decir algo pero en realidad no dice nada ya que no hay que mencionar dentro de esta parte de la demostracion puesto que esto ya fue visto en la asignatura de front end el semestre pasado.</p>
-        <p><h3>Listado de temas</h3></p>
-        <p>
+        <p> </p>
+        <p>Cada vez somos más los que queremos leer libros en inglés. Seguro que aquí encontrarás muchos libros interesantes y adaptados a lo que quieres.</p>
+        <p><h3>Libros en inglés hasta el 80% de descuento</h3></p>
           <ul>
-            {%if temas %}
-              {% for temas_c in temas %}
-
-                  <li> {{temas_c}} </li>
-
-              {% endfor %}
-            {% else %}  
-              <p>No se encontro contenido</p>
-            {%endif%}
+           promoDicc={'idioma':'inglés','descuento': 80}
+           print(type(promoDicc))
+           <class 'dict'>
+              <p>Packs con regalo </p>
           </ul>
+
         </p>
       </body>
     </html>
