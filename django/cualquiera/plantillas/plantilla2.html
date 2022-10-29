@@ -3,7 +3,7 @@
         <link rel="stylesheet" href="C:/django/css/django.css">
         <style>
           body {
-              background-color: lightcoral;
+              background-color: green;
             }
           
             h1 {
@@ -18,26 +18,36 @@
         </style>
     </head>
     <header>
-        <h1>Esto es el la 2da Plantilla de ejemplo</h1>
+        <h1>Titulos Disponibles</h1>
     </header>
     <body>
-        {% include "menu.html"%}
-        <h2> Esto es una plantilla
+<div id="caja1">
+     <nav>
+    <ul class="menu">
+    <li><a href="plantilla1.html">novedades</a></li>
+    <li><a href="plantilla2.html">titulos</a></li>
+    <li><a href="plantilla3.html">promociones</a></li>
+    </ul>
+    </nav> 
+</div>
+        <h2> LIBROS
         </h2>
-        <p>Mi nombre es {{nombre_persona}} {{apellido_persona}} {{fecha_act}} </p>
-        <p>Esto es un parrafo de ejemplo que podria decir algo pero en realidad no dice nada ya que no hay que mencionar dentro de esta parte de la demostracion puesto que esto ya fue visto en la asignatura de front end el semestre pasado.</p>
-        <p><h3>Listado de temas</h3></p>
+        <p>Los 5 mejores libros</p>
+        <p>Hemos preparado esta lista con los 5 mejores libros. No podíamos decidir cuáles son mejores o peores, por lo que el orden en esta lista no significa nada. Les recomendamos perderse y divagar entre todas estas joyas literarias.
+
+Por supuesto, mucho se podría discutir sobre algunos libros que han quedado fuera de esta lista... No dudéis en hacernos saber qué libros echáis de menos.</p>
+        <p><h3>Listado de Libros</h3></p>
         <p>
           <ul>
-            {%if temas %}
-              {% for temas_c in temas %}
-
-                  <li> {{temas_c}} </li>
-
-              {% endfor %}
-            {% else %}  
+           
+          libroDicc={'nombre':'la niebla','autor':'Stephen King'}
+          libroDicc={'nombre':'Don Quijote de la Mancha','autor':'Miguel de Cervantes'}
+          libroDicc={'nombre':'El Hobbit','autor':'J.R.R Tolkien'}
+          libroDicc={'nombre':'ella','autor':'Henry Rider Haggard'}
+          libroDicc={'nombre':'El codigo Da Vinci','autor':'Dan Brown'}
+          print(type(libroDicc))
+        <class 'dict'>
               <p>No se encontro contenido</p>
-            {%endif%}
           </ul>
         </p>
       </body>
